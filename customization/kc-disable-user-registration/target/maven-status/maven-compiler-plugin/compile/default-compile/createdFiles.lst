@@ -1,0 +1,4 @@
+com/example/keycloak/spi/DisableUserOnRegistrationAuthenticator.class
+com/example/keycloak/spi/DisableUserOnRegisterEventListenerFactory.class
+com/example/keycloak/spi/DisableUserOnRegistrationAuthenticatorFactory.class
+com/example/keycloak/spi/DisableUserOnRegisterEventListener.class
