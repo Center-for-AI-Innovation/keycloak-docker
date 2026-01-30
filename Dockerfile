@@ -1,10 +1,14 @@
-FROM quay.io/keycloak/keycloak:25.0.6 AS builder
+FROM quay.io/keycloak/keycloak:26.1 AS builder
 
 ARG KC_HEALTH_ENABLED KC_METRICS_ENABLED KC_FEATURES KC_DB KC_HTTP_ENABLED PROXY_ADDRESS_FORWARDING QUARKUS_TRANSACTION_MANAGER_ENABLE_RECOVERY KC_HOSTNAME KC_LOG_LEVEL KC_DB_POOL_MIN_SIZE
 
 ADD --chown=keycloak:keycloak https://github.com/klausbetz/apple-identity-provider-keycloak/releases/download/1.7.1/apple-identity-provider-1.7.1.jar /opt/keycloak/providers/apple-identity-provider-1.7.1.jar
 ADD --chown=keycloak:keycloak https://github.com/wadahiro/keycloak-discord/releases/download/v0.5.0/keycloak-discord-0.5.0.jar /opt/keycloak/providers/keycloak-discord-0.5.0.jar
 COPY /theme/keywind /opt/keycloak/themes/keywind
+
+# Disable user registration provider
+COPY --chown=keycloak:keycloak kc-disable-user-registration/target/kc-disable-user-registration-1.0.0.jar \
+  /opt/keycloak/providers/kc-disable-user-registration-1.0.0.jar
 
 RUN /opt/keycloak/bin/kc.sh build
 

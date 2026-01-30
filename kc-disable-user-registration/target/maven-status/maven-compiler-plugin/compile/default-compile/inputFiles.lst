@@ -1,0 +1,4 @@
+/Users/cwang138/Documents/Projects/chatUIUC/keycloak-docker/kc-disable-user-registration/src/main/java/com/example/keycloak/spi/DisableUserOnRegisterEventListener.java
+/Users/cwang138/Documents/Projects/chatUIUC/keycloak-docker/kc-disable-user-registration/src/main/java/com/example/keycloak/spi/DisableUserOnRegisterEventListenerFactory.java
+/Users/cwang138/Documents/Projects/chatUIUC/keycloak-docker/kc-disable-user-registration/src/main/java/com/example/keycloak/spi/DisableUserOnRegistrationAuthenticator.java
+/Users/cwang138/Documents/Projects/chatUIUC/keycloak-docker/kc-disable-user-registration/src/main/java/com/example/keycloak/spi/DisableUserOnRegistrationAuthenticatorFactory.java
